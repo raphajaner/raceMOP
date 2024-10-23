@@ -1,0 +1,40 @@
+# Standard Config
+defaults:
+  - maps@maps
+  - rl@rl
+  - env@env
+  - planner: planner
+  - sim: sim
+  - _self_
+# Run settings
+mode: training  # [ training, inference, baseline ]
+benchmark: false
+async_env: true
+render: false
+wandb: true
+# Cuda settings
+compile_torch: true
+cuda_allow_tf32: true
+torch_deterministic: false
+device: cuda:0
+# Evaluation settings
+eval_freq: 50
+eval_n_eps: 10
+eval_n_parallel_envs: 2
+sample_mode: false
+safety_controller: false
+# Inference loading model from wandb
+wandb_model:
+  alias: latest
+  name: race_car-649yfd1r
+# Others
+exp_name: raceMOP
+seed: 1
+notes:
+hydra:
+  job_logging:
+    formatters:
+      simple:
+        format: '%(message)s'
+
+

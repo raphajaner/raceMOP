@@ -1,0 +1,7 @@
+defaults:
+  - ego@ego
+  - opponents@opponents
+  - _self_
+
+
+

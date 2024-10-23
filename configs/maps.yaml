@@ -1,0 +1,15 @@
+maps_train: [
+  Catalunya, Nuerburgring, MoscowRaceway, Hockenheim, Sepang, Budapest, Spielberg, Sakhir
+]
+maps_test: [
+  SaoPaulo, BrandsHatch, Melbourne, MexicoCity
+]
+map_path: './maps/'
+map_ext: '.png'
+wpt_delim: ';'
+wpt_rowskip: 3
+wpt_xind: 1
+wpt_yind: 2
+wpt_thind: 3
+wpt_vind: 5
+wpt_kappa: 4

@@ -1,0 +1,54 @@
+total_timesteps: 30e6  # total timesteps of the experiments
+learning_rate: 1e-4  # the learning rate of the optimizer
+warm_up_learning_rate: 3e-4
+num_envs: 128  # the number of parallel game environments
+num_steps: 4096 # the number of steps to run in each environment per policy rollout
+anneal_lr: true  # Toggle learning rate annealing for policy and value networks
+anneal_lr_factor: 0.0 # eta_min = lr * factor
+gamma: 0.99 # the discount factor gamma
+gae_lambda: 0.95  # the lambda for the general advantage estimation
+num_minibatches: 1024  # the number of mini-batches
+update_epochs: 7 # the K epochs to update the policy
+norm_adv: True  # Toggles advantages normalization
+clip_coef: 0.1  # the surrogate clipping coefficient
+clip_vloss: true  # Toggles whether to use a clipped loss for the value function, as per the paper.
+ent_coef: 0.0  # coefficient of the entropy
+vf_coef: 0.5 # 0.5  # coefficient of the value function
+max_grad_norm: 1.0  # 0.5  # the maximum norm for the gradient clipping
+target_kl: null  #  0.01 the target KL divergence threshold
+distribution: TruncatedNormal  # ['TanhNormal', 'TruncatedNormal', 'Normal'] distribution to use for the actor's head -> TanhNormal is bounded [-1, 1]
+combine_before_dist: true
+init_logstd: [ -0.7, -0.7 ]
+upscale_tanh: 5.0
+tanh_loc: false
+pre_tanh_loc: false
+scale_action: [ 0.5, 0.5 ]
+hidden_out_dim: 64
+state_dim: 8
+weight_decay: 0
+rpo_alpha: 0.05
+pretrain: false
+critic_pretrain: 0.0
+critic_safe_exploration: false
+all_frames_history: true  # use also the stacked frames for the feature vector and not only for the lidar
+lstm:
+  use: false
+  hidden_size: 64
+  num_layers: 1
+  num_sub_minibatches: 8
+obs_keys: [
+  aaa_scans,
+  prev_action,
+  linear_vels_x,
+  linear_vels_y,
+  slip_angle,
+  action_planner,
+  yaw_rate,
+  acc_x,
+  steering_angle
+  #  'ang_vels_z',
+  #  'acc_y',
+  #  'progress',
+  #  'safe_velocity',
+  #  'lookahead_points_relative',
+]

@@ -1,0 +1,21 @@
+vehicle_params:
+  mu: 0.8
+  C_Sf: 4.718
+  C_Sr: 5.4562
+  lf: 0.15875
+  lr: 0.17145
+  h: 0.074
+  m: 3.47
+  I: 0.04712
+  s_min: -0.4189
+  s_max: 0.4189
+  sv_min: -3.2
+  sv_max: 3.2
+  v_switch: 7.319
+  a_max: 7.51
+  v_min: 0.0 # -5.0
+  v_max: 8.0
+  width: 0.27
+  length: 0.51
+  fov_deg: 270
+  lidar_points: 1080

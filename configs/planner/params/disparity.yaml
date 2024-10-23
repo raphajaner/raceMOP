@@ -1,0 +1,17 @@
+type: disparity  # 'mpc' / 'pure_pursuit' / 'apf' / 'lattice'
+vgain: [ 1.0 ]  # 1.3, 0.6
+tlad: 1.2 # 0.82461887897713965
+n_next_points: 150
+skip_next_points: 5
+vmax: None
+wpts_type: center  # 'race' or 'center'
+do_plot: false
+# params
+window_size: 10
+safe_thres: 3.0  # 2.0
+danger_thres: 3.0  # 1.5  #0.8
+rb: 100
+P: 0.6  # P gain for steering
+max_gap_length: 600
+min_gap_length: 20
+safe_vgain: 1.2

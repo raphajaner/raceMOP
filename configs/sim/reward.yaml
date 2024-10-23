@@ -1,0 +1,14 @@
+reward:
+  step: 0.0
+  collision: -5.0
+  long_vel: 0.0
+  lat_vel: -0.0
+  scaling: 1.0
+  action_change: -0.002
+  yaw_change: -0.0
+  overtaking: 0.0
+  safe_distance_to_obstacles: -0.2
+  distance_threshold: 0.4
+  safe_velocity: 0.0
+  progress: 0.0
+  traveled_distance: 0.1

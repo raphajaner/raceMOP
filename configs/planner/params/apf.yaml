@@ -1,0 +1,19 @@
+type: apf
+vgain: [ 1.0 ]
+tlad: 1.2
+n_next_points: 150
+skip_next_points: 5
+vmax: None
+wpts_type: center  # 'race' or 'center'
+# Specific params for each planner
+rr: 8.0
+k_att: 1000.0
+k_rep: 50.0
+max_iters: 20
+step_size: 0.1
+goal_threshold: 0.2
+target_l: 10.0
+lookahead_distance: 1.0
+do_plot: false
+#angle_incre: 0.00435
+#angle_min: -2.35

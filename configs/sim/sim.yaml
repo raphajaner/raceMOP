@@ -1,0 +1,14 @@
+defaults:
+  - vehicle_params
+  - reward
+render_mode: human_fast  # [ human, human_fast, None ]
+controller_dt: 0.02
+dt: 0.01
+start_pose_mode: random # [ first, sequential, random ]
+n_agents: 3
+start_positions:
+  n_clusters: 30
+  line_type: race  # 'race' / 'center'
+  kappa_threshold: 10.0 #0.5
+  dynamic_reset: true
+  n_split: 2

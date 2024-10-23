@@ -1,0 +1,17 @@
+type: ftg_plus  # 'mpc' / 'pure_pursuit' / 'apf' / 'lattice'
+vgain: [ 1.0 ]  # 1.3, 0.6
+tlad: 1.2 # 0.82461887897713965
+n_next_points: 150
+skip_next_points: 5
+vmax: None
+wpts_type: center  # 'race' or 'center'
+do_plot: false
+# params
+window_size: 10
+safe_thres: 2.0  # 2.0  # Must be meet for finding gaps
+danger_thres: 0.5  # 1.5  #0.8  # Set to zero
+rb: 100
+P: 0.3 #6 #0.6  # P gain for steering
+max_gap_length: 290
+min_gap_length: 30
+safe_vgain: 1.2

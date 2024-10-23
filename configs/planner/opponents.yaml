@@ -1,0 +1,6 @@
+defaults:
+  - params: pure_pursuit  # pure_pursuit / ftg_plus
+  - _self_
+params:
+  vgain: [ 0.8, 0.75, 0.7 ]
+  wpts_type: race

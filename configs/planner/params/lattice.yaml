@@ -1,0 +1,7 @@
+type: lattice  # 'mpc' / 'pure_pursuit' / 'apf' / 'lattice'
+vgain: [ 1.0 ]  # 1.3, 0.6
+tlad: 1.2  # 0.82461887897713965 #  1.2 #
+n_next_points: 150
+skip_next_points: 5
+vmax: None
+wpts_type: race  # 'race' or 'center'

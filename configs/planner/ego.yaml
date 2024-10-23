@@ -1,0 +1,8 @@
+defaults:
+  - params: apf  # pure_pursuit / ftg_plus
+  - _self_
+params:
+  do_plot: false
+  wpts_type: center  # 'race' or 'center'
+
+

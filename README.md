@@ -12,17 +12,13 @@ This repository is the official implementation of the [paper](https://scholar.go
 > [Manabu Tsukada](https://scholar.google.com/citations?user=GSfYxPIAAAAJ&hl=en),
 > and [Marco Caccamo](https://scholar.google.com/citations?user=Jbo1MqwAAAAJ&hl=en&oi=ao).
 
-The paper is under review for possible publication. If you find our work useful, please consider [citing](#reference) it.
-
-**Note**: The <u>full code</u> will be made available <u>after publication</u>.
+Presented at: 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
 
 <p align="center">
   <img src="docs/anim_1.gif" alt="Replicated real-world racetracks." width="200" />
-  <img src="docs/anim_2.gif" alt="Replicated real-world racetracks." width="200" />
+  <img src="docs/anim_2.gif" [main.py](../icra_2023/main.py)alt="Replicated real-world racetracks." width="200" />
   <img src="docs/anim_3.gif" alt="Replicated real-world racetracks." width="200" />
 </p>
-
-
 
 ## Table of contents
 - [Background](#background)
@@ -46,6 +42,7 @@ RaceMOP demonstrates superior handling over existing mapless planners while gene
 </p>
 
 ## Install
+- Results in the paper where obtained using Python 3.8.10; 3.10 seems to work too.
 - We recommend to use a virtual environment for the installation:
   ```bash
   python -m venv racemop_env
@@ -53,11 +50,13 @@ RaceMOP demonstrates superior handling over existing mapless planners while gene
   ```
 - Activate the environment and install the following packages:
     ```bash
-  pip install torch torchvision torchaudio
-  pip install tensordict torchrl
+  pip install torch==2.0.1
+  pip install tensordict==0.1.2
+  pip install torchrl==0.1.1
+  pip install numpy==1.24.4
   pip install torchinfo
   pip install matplotlib
-  pip install gymnasium
+  pip install gymnasium==0.29.1
   pip install hydra-core
   pip install tqdm
   pip install flatdict
@@ -78,13 +77,13 @@ RaceMOP demonstrates superior handling over existing mapless planners while gene
     ```
 ## Usage
 ### Inference
-You can start evaluation the provided agent by running the following command:
+You can start evaluating the provided agent by running the following command:
 ```bash
 python main.py
 ```
 The use of your GPU can be avoided by running:
 ```bash
-python main.py cuda=cpu
+python main.py device=cpu
 ```
 ### Rendering
 Rendering can be enabled by setting running:
@@ -93,7 +92,7 @@ python main.py render=True
 ```
 Since this will launch windows for all 12 maps, we recommend selecting a specific map for evaluation:
 ```bash
-python main.py render=True maps.maps_train=[Catalunya] maps.maps_test=[]
+python main.py mode=inference render=True maps.maps_train=[Catalunya] maps.maps_test=[]
 ```
 
 ### Others
@@ -109,12 +108,14 @@ Most of the code is documented with *automatically* generated docstrings, please
 If you find our work useful, please consider citing our paper:
 
 ```bibtex 
-@article{trumpp2024racemop,
+@inproceedings{trumpp2024racemop,
   title={RaceMOP: Mapless online path planning for multi-agent autonomous racing using residual policy learning},
   author={Trumpp, Raphael and Javanmardi, Ehsan and Nakazato, Jin and Tsukada, Manabu and Caccamo, Marco},
-  journal={arXiv preprint arXiv:2403.07129},
-  year={2024}
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  year={2024},
+  organization={IEEE}
 }
+
 ```
 
 ## License
