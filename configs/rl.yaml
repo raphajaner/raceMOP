@@ -1,8 +1,8 @@
 total_timesteps: 30e6  # total timesteps of the experiments
 learning_rate: 1e-4  # the learning rate of the optimizer
 warm_up_learning_rate: 3e-4
-num_envs: 128  # the number of parallel game environments
-num_steps: 4096 # the number of steps to run in each environment per policy rollout
+num_envs: 256  # the number of parallel game environments
+num_steps: 2048 # the number of steps to run in each environment per policy rollout
 anneal_lr: true  # Toggle learning rate annealing for policy and value networks
 anneal_lr_factor: 0.0 # eta_min = lr * factor
 gamma: 0.99 # the discount factor gamma

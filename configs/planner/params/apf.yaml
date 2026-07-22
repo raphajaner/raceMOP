@@ -8,7 +8,7 @@ wpts_type: center  # 'race' or 'center'
 # Specific params for each planner
 rr: 8.0
 k_att: 1000.0
-k_rep: 50.0
+k_rep: 50.0  # correct value, the one from the paper with k_rep=25 is unfortunately wrong
 max_iters: 20
 step_size: 0.1
 goal_threshold: 0.2

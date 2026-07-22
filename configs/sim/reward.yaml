@@ -4,9 +4,9 @@ reward:
   long_vel: 0.0
   lat_vel: -0.0
   scaling: 1.0
-  action_change: -0.002
+  action_change: -0.005
   yaw_change: -0.0
-  overtaking: 0.0
+  overtaking: 0.5
   safe_distance_to_obstacles: -0.2
   distance_threshold: 0.4
   safe_velocity: 0.0
