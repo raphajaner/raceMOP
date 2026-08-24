@@ -88,7 +88,7 @@ class ResidualAgent(nn.Module):
         """
         std = torch.exp(logstd)
         dist = self.dist_head(
-            mean, std, min=self.min_max_dist[0], max=self.min_max_dist[1], upscale=self.upscale_tanh,
+            mean, std, low=self.min_max_dist[0], high=self.min_max_dist[1], upscale=self.upscale_tanh,
             tanh_loc=self.tanh_loc
         )
         return dist

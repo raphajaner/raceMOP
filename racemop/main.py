@@ -78,10 +78,10 @@ def main(config: DictConfig) -> None:
             artifact = wandb.run.use_artifact(f'{config.wandb_model.name}:{config.wandb_model.alias}')
             artifact_dir = artifact.download(root=wandb.run.dir)
             logging.info(f"Loaded agent {artifact.source_name} (global step {artifact.metadata['global_step']}).")
-            checkpoint = torch.load(f'{artifact_dir}/agent.pt', map_location=device)
+            checkpoint = torch.load(f'{artifact_dir}/agent.pt', map_location=device, weights_only=False)
             os.remove(f'{wandb.run.dir}/agent.pt')
         else:
-            checkpoint = torch.load('/tmp/agent.pt', map_location=device)
+            checkpoint = torch.load('/tmp/agent.pt', map_location=device, weights_only=False)
 
         # Update config with the saved one from wandb
         OmegaConf.update(config, 'rl', checkpoint['config'].rl)
@@ -407,7 +407,7 @@ def main(config: DictConfig) -> None:
         artifact = wandb.run.use_artifact(f'race_car-{wandb.run.id}:best_reward')
         artifact_dir = artifact.download(root=wandb.run.dir)
         logging.info(f"Loaded agent {artifact.source_name} (global step {artifact.metadata['global_step']}).")
-        checkpoint = torch.load(f'{artifact_dir}/agent.pt', map_location=device)
+        checkpoint = torch.load(f'{artifact_dir}/agent.pt', map_location=device, weights_only=False)
         os.remove(f'{wandb.run.dir}/agent.pt')
         agent.load_state_dict(checkpoint['model_state_dict'])
         agent = agent.to(device)

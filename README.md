@@ -50,10 +50,10 @@ RaceMOP demonstrates superior handling over existing mapless planners while gene
   ```
 - Activate the environment and install the following packages:
     ```bash
-  pip install torch==2.0.1
-  pip install tensordict==0.1.2
-  pip install torchrl==0.1.1
-  pip install numpy==1.24.4
+  pip install torch==2.13
+  pip install tensordict
+  pip install torchrl==0.13.3
+  pip install numpy
   pip install torchinfo
   pip install matplotlib
   pip install gymnasium==0.29.1
